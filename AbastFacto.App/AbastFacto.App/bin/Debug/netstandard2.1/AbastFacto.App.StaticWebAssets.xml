@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/AbastFacto.ComponentsLibrary" Path="C:\CaracterizacionUC\AbastFacto.App\AbastFacto.ComponentsLibrary\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\CaracterizacionUC\AbastFacto.App\AbastFacto.App\bin\Debug\netstandard2.1\wwwroot\" />
+</StaticWebAssets>

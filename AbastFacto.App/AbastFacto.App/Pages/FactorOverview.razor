@@ -1,0 +1,49 @@
+@page "/factoroverview"
+
+<h1 class="page-title">Supply Factor List</h1>
+
+@if (Factors == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>ID Factor</th>
+                <th>Short Name</th>
+                <th>Measure</th>
+                <th></th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var factor in Factors)
+            {
+                <tr>
+                    <td>@factor.FactorId</td>
+                    <td>@factor.ShortName</td>
+                    <td>@factor.Metric</td>
+                    <td>
+                        <a href="@($"factordetail/{factor.FactorId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-info-circle"></i>
+                            Factor Details
+                     
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@($"factoredit/{factor.FactorId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-info-circle"></i>
+                            Edit Factor
+                     
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<button @onclick="QuickAddFactor" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+<AddFactorDialog @ref="AddFactorDialog" CloseEventCallback="@AddFactorDialog_OnDialogClose"></AddFactorDialog>

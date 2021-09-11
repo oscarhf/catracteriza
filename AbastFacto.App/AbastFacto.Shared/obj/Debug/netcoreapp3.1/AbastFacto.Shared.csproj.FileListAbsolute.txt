@@ -1,0 +1,9 @@
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\bin\Debug\netcoreapp3.1\AbastFacto.Shared.deps.json
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\bin\Debug\netcoreapp3.1\AbastFacto.Shared.dll
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\bin\Debug\netcoreapp3.1\AbastFacto.Shared.pdb
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.csprojAssemblyReference.cache
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.AssemblyInfoInputs.cache
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.AssemblyInfo.cs
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.csproj.CoreCompileInputs.cache
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.dll
+D:\CaracterizacionUC\AbastFacto.App\AbastFacto.Shared\obj\Debug\netcoreapp3.1\AbastFacto.Shared.pdb

@@ -1,0 +1,39 @@
+@if (ShowDialog)
+{
+    <div class="modal fade show d-block" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleLabel">Employee Quick Add</h5>
+                    <button type="button" class="close" @onclick="@Close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <EditForm Model="@Factor" OnValidSubmit="@HandleValidSubmit">
+
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="shorttName">Short name: </label>
+                            <InputText id="shortName" class="form-control" @bind-Value="@Factor.ShortName"
+                            placeholder="Enter factor short name"></InputText>
+                            <ValidationMessage For="@(() => Factor.ShortName)" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="factorMetric">Factor metric: </label>
+                            <InputText id="factorMetric" class="form-control" @bind-Value="@Factor.Metric"
+                            placeholder="Enter factor metric"></InputText>
+                            <ValidationMessage For="@(() => Factor.Metric)" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save factor</button>
+                        <a class="btn btn-outline-primary" @onclick="@Close">Close</a>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+}

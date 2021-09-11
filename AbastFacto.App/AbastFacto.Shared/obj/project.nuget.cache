@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "OAf5tIIX96r2wAy6g6q7dn2D1JT7eMelB56h/AMpvdMjLmY5wV+We/72qmKRU27tameE2TxDjrc2H9GNZyrtOw==",
+  "success": true,
+  "projectFilePath": "C:\\CaracterizacionUC\\AbastFacto.App\\AbastFacto.Shared\\AbastFacto.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oscar\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\oscar\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\oscar\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\oscar\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\oscar\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,78 @@
+@page "/factoredit"
+@page "/factoredit/{FactorId}"
+
+@using AbastFacto.App.Shared
+@if (!Saved) // Is editing already
+{
+
+    <section class="employee-edit">
+        <h1 class="page-title">Details for @Factor.ShortName</h1>
+        <EditForm Model="@Factor" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+            <DataAnnotationsValidator/>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="form-group row">
+                <label for="shortName" class="col-sm-3">Factor short name: </label>
+                <InputText id="shortName" class="form-control col-sm-8" @bind-Value="@Factor.ShortName"
+                placeholder="Enter factor short name"></InputText>
+                 <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Factor.ShortName)" />
+            </div>
+            <div class="form-group row">
+                <label for="longName" class="col-sm-3">Factor long name: </label>
+                <InputText id="longName" class="form-control col-sm-8" @bind-Value="@Factor.LongName"
+                placeholder="Enter factor long name"></InputText>
+                 <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Factor.LongName)" />
+            </div>
+            <div class="form-group row">
+                <label for="metric" class="col-sm-3">Metric: </label>
+                <InputText id="metric" class="form-control col-sm-8" @bind-Value="@Factor.Metric"
+                placeholder="Enter factor metric"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="inputData" class="col-sm-3">Input data: </label>
+                <InputText id="inputData" class="form-control col-sm-8" @bind-Value="@Factor.InputData"
+                placeholder="Enter factor input data"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="infoType" class="col-sm-3">Infomation Type: </label>
+                <InputText id="infoType" class="form-control col-sm-8" @bind-Value="@Factor.InfoType"
+                placeholder="Enter factor information type"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="source" class="col-sm-3">Information Source: </label>
+                <InputText id="source" class="form-control col-sm-8" @bind-Value="@Factor.Source"
+                placeholder="Enter factor information source"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="notes" class="col-sm-3">Notes: </label>
+                <InputTextArea id="notes" class="form-control col-sm-8" @bind-Value="@Factor.Notes"
+                placeholder="Enter general notes"></InputTextArea>
+                <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Factor.Notes)" />
+                
+            </div>
+            <div class="form-group row">
+                <label for="factortype" class="col-sm-3">Marital status: </label>
+                <InputSelect id="factortype" class="form-control col-sm-8" @bind-Value=@Factor.FactorType>
+                    <option value="@(FactorType.economic)">Economic Factor</option>
+                    <option value="@(FactorType.waste)">Waste Factor</option>
+                    <option value="@(FactorType.social)">Social Factor</option>
+                    <option value="@(FactorType.logistic)">Logistic Factor</option>
+                    <option value="@(FactorType.environment)">Environent Factor</option>
+                </InputSelect>
+            </div>
+            <button type="submit" class="btn btn-primary edit-btn">Save Factor</button>
+            @if (Factor.FactorId > 0)
+            {
+                <a class="btn btn-danger" @onclick="@DeleteFactor">
+                    Delete
+                </a>
+            }
+            <a class="btn btn-outline-primary" @onclick="@NavigateToOverview">Back to overview</a>
+        </EditForm>
+    </section>
+}
+else
+{
+    <div class="alert @StatusClass">@Message</div>
+
+}
